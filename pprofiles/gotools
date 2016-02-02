@@ -1,0 +1,2 @@
+export PROOT="/code/go/src/github.com/xinlaini/gotools"
+export PNAME=gotools

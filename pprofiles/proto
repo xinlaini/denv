@@ -1,0 +1,2 @@
+export PROOT="/code/proto"
+export PNAME=proto

@@ -1,0 +1,109 @@
+" An example for a vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2002 Sep 19
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.vimrc
+"	      for Amiga:  s:.vimrc
+"  for MS-DOS and Win32:  $VIM\_vimrc
+"	    for OpenVMS:  sys$login:.vimrc
+
+" Vundle settings
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+filetype plugin indent on    " required
+" End Vundle settings
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+
+set backspace=indent,eol,start
+set nobackup		" do not keep a backup file, use versions instead
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+set smartcase
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set ignorecase		" ignore case when searching
+set autoread		" automatically load the change outside of editor
+set encoding=utf-8
+set nu
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+set t_Co=256
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  augroup END
+
+else
+
+  set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+let maplocalleader=","
+
+set switchbuf+=usetab,newtab
+
+" useful key bindings
+" switching between tabs
+map <C-tab> :tabn<CR>
+map <S-tab> :tabp<CR>
+" sort
+map <C-F5> :sort u<CR>
+
+" has to do twice for the background color to show correctly
+so /denv/vim/colors/vividchalk.vim
+
+command! -nargs=1 -complete=file Vsrightstay :exe 'rightbelow vs ' . <q-args> . ' | wincmd W'
+noremap <localleader>v :Vsrightstay 
+noremap <localleader>e :tabe 
+noremap <localleader>o <C-W>gf
+noremap <localleader>w :w<CR>
+noremap <localleader>1 :tabn 1<CR>
+noremap <localleader>2 :tabn 2<CR>
+noremap <localleader>3 :tabn 3<CR>
+noremap <localleader>4 :tabn 4<CR>
+noremap <localleader>5 :tabn 5<CR>
+noremap <localleader>6 :tabn 6<CR>
+noremap <localleader>7 :tabn 7<CR>
+noremap <localleader>8 :tabn 8<CR>
+noremap <localleader>9 :tabn 9<CR>
+noremap <silent> <localleader>. :nohlsearch<CR>
+noremap <localleader>g :!grep -ri "<cword>" .<CR>
