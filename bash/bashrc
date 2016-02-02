@@ -1,3 +1,3 @@
-source /denv/bash_common
+source ~/.denv/bash/bash_common
 alias ls="ls --color=auto"
 alias s="source ~/.bashrc"

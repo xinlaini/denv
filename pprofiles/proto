@@ -1,2 +1,2 @@
-export PROOT="/code/proto"
+export PROOT="~/code/proto"
 export PNAME=proto

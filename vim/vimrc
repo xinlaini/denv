@@ -89,7 +89,7 @@ map <S-tab> :tabp<CR>
 map <C-F5> :sort u<CR>
 
 " has to do twice for the background color to show correctly
-so /denv/vim/colors/vividchalk.vim
+so ~/.denv/vim/colors/vividchalk.vim
 
 command! -nargs=1 -complete=file Vsrightstay :exe 'rightbelow vs ' . <q-args> . ' | wincmd W'
 noremap <localleader>v :Vsrightstay 
