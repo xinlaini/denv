@@ -1,5 +1,5 @@
 export PS1="\[\e[31m\]\h » \[\e[32m\]\t » \W ➥  \[\e[0m\]"
-export BOSON="~/boson"
+export BOSON="$HOME/boson"
 export GOPATH="$BOSON/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
