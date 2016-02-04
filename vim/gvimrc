@@ -1,0 +1,11 @@
+if has("gui_macvim")
+	set guioptions-=r
+	set guioptions-=R
+	set guioptions-=l
+	set guioptions-=L
+	highlight SignColumn guibg=#1fbad6
+	set guifont=Consolas:h14
+else
+	set guifont=Consolas\ 11
+endif
+
