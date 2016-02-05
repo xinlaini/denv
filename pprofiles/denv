@@ -1,0 +1,2 @@
+export PROOT=$HOME/.denv
+export PNAME=denv
