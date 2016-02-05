@@ -18,6 +18,18 @@ git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
+proxit() {
+  unset PROOT
+  unset PNAME
+  unset -f dir_prompt_color
+  unset -f dir_prompt
+  unset -f git_branch
+  unset -f proxit
+  unalias gop
+  s
+  cd
+}
+
 export PS1="\[\e[31m\]\h » \[\e[33m\]\t » \[\e[34m\]${PNAME} \[\e[35m\]\$(git_branch)\[\e[34m\]» \[\$(dir_prompt_color)\]\$(dir_prompt)\[\e[0m\]"
 alias gop="cd $PROOT;tput setaf 2; echo 'In $PROOT'; tput sgr0"
 gop
