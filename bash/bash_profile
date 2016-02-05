@@ -1,3 +1,4 @@
 source ~/.denv/bash/bash_common
 export CLICOLOR=1
 alias s="source ~/.bash_profile"
+alias e=mvim

@@ -31,5 +31,5 @@ proxit() {
 }
 
 export PS1="\[\e[31m\]\h » \[\e[33m\]\t » \[\e[34m\]${PNAME} \[\e[35m\]\$(git_branch)\[\e[34m\]» \[\$(dir_prompt_color)\]\$(dir_prompt)\[\e[0m\]"
-alias gop="cd $PROOT;tput setaf 2; echo 'In $PROOT'; tput sgr0"
+alias gop="cd $PROOT && tput setaf 2 && echo 'In $PROOT' && tput sgr0"
 gop

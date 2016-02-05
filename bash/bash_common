@@ -11,6 +11,5 @@ alias turnoff='sudo shutdown -hP now'
 alias reboot='sudo shutdown -r now'
 
 pro() {
-  source ~/.denv/pprofiles/$1
-  source ~/.denv/pprofiles/shared
+  source ~/.denv/pprofiles/$1 && source ~/.denv/pprofiles/shared
 }
