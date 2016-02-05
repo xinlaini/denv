@@ -1,2 +1,2 @@
-export PROOT="~/code/proto"
+export PROOT=/home/xinlaini/boson/proto
 export PNAME=proto
