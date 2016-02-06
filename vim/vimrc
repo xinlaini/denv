@@ -63,6 +63,7 @@ if has("autocmd")
     \ endif
 
   augroup END
+  autocmd Filetype proto setlocal cindent
 
 else
 
