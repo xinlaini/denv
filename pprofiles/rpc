@@ -1,0 +1,2 @@
+export PROOT=$BOSON/go/src/boson/rpc
+export PNAME=rpc
