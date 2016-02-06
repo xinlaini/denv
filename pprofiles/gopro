@@ -1,2 +1,2 @@
-export PROOT=$BOSON/go/src/boson/tools/gopro
+export PROOT=$BOSON/go/src/boson/devtools/gopro
 export PNAME=gopro
