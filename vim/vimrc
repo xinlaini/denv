@@ -90,6 +90,7 @@ noremap <localleader>v :Vsrightstay
 noremap <localleader>e :tabe 
 noremap <localleader>o <C-W>gf
 noremap <localleader>w :w<CR>
+noremap <localleader>h :tab h 
 noremap <localleader>1 :tabn 1<CR>
 noremap <localleader>2 :tabn 2<CR>
 noremap <localleader>3 :tabn 3<CR>
