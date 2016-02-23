@@ -101,4 +101,4 @@ noremap <localleader>7 :tabn 7<CR>
 noremap <localleader>8 :tabn 8<CR>
 noremap <localleader>9 :tabn 9<CR>
 noremap <silent> <localleader>. :nohlsearch<CR>
-noremap <localleader>g :!grep -ri "<cword>" .<CR>
+noremap <localleader>g :!grep -ri "<cword>" %:p:h<CR>
