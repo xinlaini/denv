@@ -7,6 +7,6 @@ if has("gui_macvim")
 	highlight SignColumn guibg=#1fbad6
 	set guifont=Operator\ Mono\ Book:h14
 else
-	set guifont=Operator\ Mono\ Book\ 13
+	set guifont=Operator\ Mono\ Light\ 13
 endif
 
