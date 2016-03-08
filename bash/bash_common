@@ -9,6 +9,8 @@ alias st='git status'
 alias b='git branch -a'
 alias turnoff='sudo shutdown -hP now'
 alias reboot='sudo shutdown -r now'
+alias gotest='gopro --for_tests > /dev/null && go test'
+alias gobuild='gopro > /dev/null && go build'
 
 pro() {
   source ~/.denv/pprofiles/$1 && source ~/.denv/pprofiles/shared

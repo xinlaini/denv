@@ -5,6 +5,8 @@ nmap <localleader>t <Plug>(go-test)
 nmap <localleader>b <Plug>(go-build)
 nmap <localleader>c <Plug>(go-coverage)
 nmap <localleader>d <Plug>(go-doc-tab)
+nmap <localleader>pr :!gopro<CR>
+nmap <localleader>pt :!gopro --for_tests<CR>
 
 " vim-go
 let g:go_fmt_fail_silently = 1
