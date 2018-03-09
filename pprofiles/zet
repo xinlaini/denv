@@ -1,0 +1,2 @@
+export PROOT=$HOME/code/golang/src/zetta-pipe
+export PNAME=zet

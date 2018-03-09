@@ -1,0 +1,6 @@
+export PROOT=$HOME/code/firmware/components/driverAssist/autopilot
+export PNAME=firm
+
+sconb() {
+  ${PROOT}/tools/autopilot build scons -j8 --configs=ap:$@
+}

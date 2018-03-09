@@ -10,7 +10,7 @@ dir_prompt() {
   if [[ ${PWD##$PROOT} == $PWD ]]; then
     echo "${PWD} ➥  "
   else
-    python -c "import os.path; print os.path.relpath('`pwd`', '$PROOT') + ' ➥  '"
+    echo "${PWD##*/} ➥  "
   fi
 }
 

@@ -1,0 +1,2 @@
+export PROOT=$HOME/code/go/src/cgh
+export PNAME=cgh

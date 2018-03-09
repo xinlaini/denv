@@ -1,17 +1,20 @@
 export PS1="\[\e[31m\]\h » \[\e[32m\]\t » \W ➥  \[\e[0m\]"
-export BOSON="$HOME/boson"
-export GOPATH="$BOSON/go"
-export GOTOOLS="$HOME/.gotools"
-export PATH="$PATH:/usr/local/go/bin:$GOTOOLS/bin:$HOME/.denv/bash/bin"
+export GOPATH="/home/xni/code/go"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin:$HOME/.denv/bash/bin"
 
 alias grep="grep --color=auto"
 alias st='git status'
 alias b='git branch -a'
 alias turnoff='sudo shutdown -hP now'
 alias reboot='sudo shutdown -r now'
-alias gotest='gopro --for_tests > /dev/null && go test'
-alias gobuild='gopro > /dev/null && go build'
 
 pro() {
   source ~/.denv/pprofiles/$1 && source ~/.denv/pprofiles/shared
+}
+ta() {
+  tmux attach-session -t $1
+}
+sssh() {
+ eval `ssh-agent`
+ ssh-add
 }

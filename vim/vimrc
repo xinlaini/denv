@@ -64,6 +64,8 @@ if has("autocmd")
 
   augroup END
   autocmd Filetype proto setlocal cindent
+  autocmd FileType go so ~/.denv/vim/au_go.vim
+  autocmd FileType c,cpp,hpp,h so ~/.denv/vim/au_cpp.vim
 
 else
 
@@ -77,13 +79,18 @@ set switchbuf+=usetab,newtab
 
 " useful key bindings
 " switching between tabs
-map <C-tab> :tabn<CR>
 map <S-tab> :tabp<CR>
 " sort
 map <C-F5> :sort u<CR>
 
 " has to do twice for the background color to show correctly
 so ~/.denv/vim/colors/vividchalk.vim
+so ~/.denv/vim/colors/vividchalk.vim
+so ~/.denv/vim/vundle.vim
+so ~/.denv/vim/nerdtree.vim
+so ~/.denv/vim/ctrlp.vim
+so ~/.denv/vim/syntastic.vim
+so ~/.denv/vim/ycm.vim
 
 command! -nargs=1 -complete=file Vsrightstay :exe 'rightbelow vs ' . <q-args> . ' | wincmd W'
 noremap <localleader>v :Vsrightstay 
@@ -91,6 +98,7 @@ noremap <localleader>e :tabe
 noremap <localleader>o <C-W>gf
 noremap <localleader>w :w<CR>
 noremap <localleader>h :tab h 
+noremap <localleader>n :tabn<CR> 
 noremap <localleader>1 :tabn 1<CR>
 noremap <localleader>2 :tabn 2<CR>
 noremap <localleader>3 :tabn 3<CR>

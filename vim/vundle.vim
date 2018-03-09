@@ -15,6 +15,8 @@ Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
