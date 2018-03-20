@@ -1,0 +1,41 @@
+! Use a nice truetype font and size by default... 
+xterm*faceName: Operator Mono Book
+xterm*faceSize: 11
+xterm*renderFont: true
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+xterm*loginshell: true
+
+! I like a LOT of scrollback...
+xterm*savelines: 16384
+
+! double-click to select whole URLs :D
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! DOS-box colours...
+xterm*foreground: rgb:c7/c7/c7
+xterm*background: rgb:00/00/10
+xterm*color0: rgb:00/00/00
+xterm*color1: rgb:db/4a/4a
+xterm*color2: rgb:31/ac/38
+xterm*color3: rgb:b6/b4/1c
+xterm*color4: rgb:1f/ba/d6
+xterm*color5: rgb:d2/33/d0
+xterm*color6: rgb:00/c5/c7
+xterm*color7: rgb:c7/c7/c7
+xterm*color8: rgb:68/68/68
+xterm*color9: rgb:ff/6e/67
+xterm*color10: rgb:5f/fa/68
+xterm*color11: rgb:ff/fc/67
+xterm*color12: rgb:68/71/ff
+xterm*color13: rgb:ff/77/ff
+xterm*color14: rgb:60/fd/ff
+xterm*color15: rgb:ff/ff/ff
+
+xterm*vt100*geometry: 150x50
+! right hand side scrollbar...
+xterm*rightScrollBar: true
+xterm*ScrollBar: true
+
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
